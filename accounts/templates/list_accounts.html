@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account List</title>
+</head>
+<body>
+    <h1>All Accounts</h1>
+    <ul>
+        {% for account in accounts %}
+            <li><a href="{% url 'account_info' account.id %}">{{ account.name }} - Balance: ${{ account.balance }}</a></li>
+        {% empty %}
+            <li>No accounts available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

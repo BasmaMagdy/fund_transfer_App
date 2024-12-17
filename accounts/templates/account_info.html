@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Info</title>
+</head>
+<body>
+    <h1>{{ account.name }}</h1>
+    <p>Balance: ${{ account.balance }}</p>
+    <a href="{% url 'transfer_funds' %}">Transfer Funds</a>
+</body>
+</html>
